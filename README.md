@@ -1,70 +1,144 @@
-# Getting Started with Create React App
+# 房地产投资展示平台
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+一个基于React的房地产投资信息展示平台，用于展示物业投资数据、收益分析和市场信息。
 
-## Available Scripts
+## 功能特点
 
-In the project directory, you can run:
+- 📊 物业投资数据展示
+- 💰 年化收益率计算
+- 🏠 房产信息可视化
+- 📈 投资回报分析
+- 🎨 现代化响应式界面
 
-### `npm start`
+## 技术栈
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **前端框架**: React 19.1.0
+- **样式**: CSS3 + 自定义样式
+- **构建工具**: Create React App
+- **测试**: Jest + React Testing Library
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 项目结构
 
-### `npm test`
+```
+src/
+├── components/          # 组件目录
+├── assets/             # 静态资源
+│   └── images/         # 图片文件
+├── HomePage.js         # 主页组件
+├── App.js              # 应用主文件
+├── propertyData.json   # 物业数据
+└── styles/             # 样式文件
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 快速开始
 
-### `npm run build`
+### 环境要求
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js >= 16.0.0
+- npm >= 8.0.0
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 安装
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+# 克隆项目
+git clone [your-repo-url]
 
-### `npm run eject`
+# 进入项目目录
+cd company-poster
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# 安装依赖
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 运行
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+# 开发模式
+npm start
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# 构建生产版本
+npm run build
 
-## Learn More
+# 运行测试
+npm test
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 使用说明
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **开发模式**: 运行 `npm start` 启动开发服务器，访问 http://localhost:3000
+2. **生产构建**: 运行 `npm run build` 生成优化的生产版本
+3. **数据配置**: 修改 `src/propertyData.json` 来更新物业数据
 
-### Code Splitting
+## 配置
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+项目使用JSON文件存储物业数据，可以通过修改 `src/propertyData.json` 来更新显示内容：
 
-### Analyzing the Bundle Size
+```json
+{
+  "property": {
+    "name": "物业名称",
+    "location": "地址信息"
+  },
+  "loan": {
+    "amount": "贷款金额",
+    "rate": "利率"
+  },
+  "investment": {
+    "yield": "年化收益率"
+  }
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 部署
 
-### Making a Progressive Web App
+### GitHub Pages 部署
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. 安装 gh-pages 包：
+```bash
+npm install --save-dev gh-pages
+```
 
-### Advanced Configuration
+2. 在 package.json 中添加 homepage 字段：
+```json
+{
+  "homepage": "https://[username].github.io/[repository-name]"
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+3. 添加部署脚本：
+```json
+{
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  }
+}
+```
 
-### Deployment
+4. 运行部署：
+```bash
+npm run deploy
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 贡献指南
 
-### `npm run build` fails to minify
+1. Fork 本项目
+2. 创建功能分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 打开 Pull Request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 许可证
+
+本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
+
+## 联系方式
+
+如有问题或建议，请通过以下方式联系：
+
+- 邮箱: [your-email@example.com]
+- GitHub Issues: [项目Issues页面]
+
+---
+
+⭐ 如果这个项目对你有帮助，请给个 star！
