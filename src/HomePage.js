@@ -28,16 +28,26 @@ const HomePage = () => {
       <header className="header-grid">
         {headerImages.map((img, idx) => (
           <div className="header-img" key={idx}>
-            <img src={img} alt={`header-${idx}`} className="header-img-el" />
+            <div className="image-container">
+              <img src={img} alt={`header-${idx}`} className="header-img-el" />
+              {idx === 2 && ( // 修改为左下角图片（索引2）
+                <>
+                  <div className="mortgage-label">
+                    <span>二级抵押</span>
+                  </div>
+                  <div className="mortgage-bar"></div>
+                </>
+              )}
+            </div>
           </div>
         ))}
       </header>
 
-      {/* 顶部：左边标题，右边年化收益 */}
+      {/* 顶部：左边标题，右边收益 */}
       <div className="top-section">
         <div className="top-left">
           <div className="main-title-container">
-            <div className="main-title">HARTLEY</div>
+            <div className="main-title">Guildford</div>
             <div className="main-title-row">
               <span className="sub-title">NSW</span>
               <span className="sub-title sub-title-red">2790</span>
@@ -51,7 +61,7 @@ const HomePage = () => {
               <div className="right-sub">(固定年化，每月付息）</div>
             </div>
             <div className="yield-rate">
-              <span className="rate-num">12%</span>
+              <span className="rate-num">14.4%</span>
             </div>
           </div>
         </div>
@@ -61,7 +71,7 @@ const HomePage = () => {
       <div className="middle-section">
         <div className="middle-left">
           <div className="property-description">
-            项目位于新州蓝山地区 Hartley Vale 的农场，总面积 394.48 公顷，距离悉尼 CBD 市中心 131 公里，离 Hartley 当地小镇 Towncenter5 公里，周边生活交通便利，学校设施服务齐全，当前市场估价 5,500,000 澳元；另加一套市场价值 80 万的 Strathfield 两房公寓的一级抵押。
+            位于悉尼中央商务区以西约25公里，抵押资产为一栋1955年建成的独立住宅，Torrens产权，设有2间卧室、1间浴室和1个停车位，土地面积537平方米，室内面积101平方米。Guildford区域独立屋市场活跃，中位价为123万澳元，过去12个月增长7.2%，房产平均挂牌时间为52天，全年成交量达153套(平均每月13套)，整体流动性稳定，属于悉尼西区较具需求的住宅板块之一。          
           </div>
         </div>
         <div className="middle-right">
@@ -108,6 +118,7 @@ const HomePage = () => {
             <div className="data-title">贷款金额</div>
           </div>
           <div className="data-value">$2,000,000</div>
+          <div className="data-note">(一押银行ANZ $506,631)</div>
         </div>
         <div className="data-col">
           <div className="data-icon-title-row">
@@ -116,7 +127,8 @@ const HomePage = () => {
             </div>
             <div className="data-title">项目估价</div>
           </div>
-          <div className="data-value">$6,300,000</div>
+          <div className="data-value">$5,900,000</div>
+          <div className="data-note">(地块分割后价值约 $12,000,000)</div>
         </div>
         <div className="data-col">
           <div className="data-icon-title-row">
@@ -125,7 +137,8 @@ const HomePage = () => {
             </div>
             <div className="data-title">LVR 借贷比</div>
           </div>
-          <div className="data-value">31.7%</div>
+          <div className="data-value">33%</div>
+          <div className="data-note">(地块分割后 LVR 17%)</div>
         </div>
       </div>
 
