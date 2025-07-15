@@ -2,8 +2,11 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: aqua;
-  /* background: #fff; */
+  max-width: 1200px; /* 调整为1200px */
+  margin: 0 auto;
+  background: #fff;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 /* 旧样式已移除，使用新的 .top-section, .middle-section, .bottom-section */
@@ -64,8 +67,8 @@
   margin-bottom: 18px;
 }
 .right-title {
-  font-size: 1.8rem;
-  color: #1a237e;
+  font-size: 2.3rem;
+  color: #142651;
   font-weight: bold;
   margin: 0;
 }
@@ -77,12 +80,12 @@
   color: #d32f2f;
   font-weight: bold;
   line-height: 1;
-  margin-left: -60%
+  margin-left: 25%
 }
 .right-sub {
-  font-size: 1.2rem;
+  font-size: 1.35rem;
   font-weight: 600;
-  color: #1a237e;
+  color: #142651;
   margin: 0;
 }
 /* 旧样式已合并到 .info-table */
@@ -117,11 +120,12 @@
   gap: 0px;
   padding: 32px 0 0 0;
   background: #fff;
-  max-width: 1100px;
+  max-width: 1200px; /* 调整为1200px */
   width: 100%;
-  margin: 0 auto 0 auto;
-  /* border-radius: 0 0 16px 16px; */
+  margin: 0 auto;
+  position: relative; /* 添加相对定位 */
 }
+
 .header-img {
   background: #d9d9d9;
   height: 240px;
@@ -130,9 +134,45 @@
   justify-content: center;
   font-size: 1.1rem;
   color: #888;
-  border-radius: 8px;
-  overflow: hidden;
 }
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.header-img-el {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.mortgage-label {
+  position: absolute;
+  bottom: 8px; /* 调整标签位置 */
+  left: 0;
+  background-color: #D01123;
+  padding: 4px 24px; /* 减小上下内边距 */
+  z-index: 2;
+}
+
+.mortgage-label span {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.mortgage-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%; /* 让长度横跨两张图片 */
+  height: 0.7em; /* 减小高度 */
+  background: linear-gradient(to right, #D01123 0%, #D01123 50%, #142651 50%, #142651 100%);
+  z-index: 1;
+}
+
 .footer {
   background: transparent;
   color: #fff;
@@ -146,17 +186,11 @@
 .footer-image {
   width: 100%;
   height: auto;
-  max-width: 1100px;
+  max-width: 1200px; /* 调整为1200px */
   object-fit: contain;
   display: block;
   margin: 0 auto;
-}
-
-.header-img-el {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  /* border-radius: 8px; */
+  /* 确保没有其他可能导致锐化的属性 */
 }
 
 /* 旧样式已移除，使用新的 .bottom-section */
@@ -167,17 +201,17 @@
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  margin: 40px auto 0 auto;
-  max-width: 1100px;
+  margin: 0px auto 0 auto;
+  max-width: 1200px; /* 调整为1200px */
   width: 100%;
-  gap: 36px;
+  gap: 20px;
 }
 
 .top-left {
   background: #fff;
   border-radius: 16px;
   /* box-shadow: 0 2px 16px rgba(0,0,0,0.08); */
-  padding: 36px 32px 28px 32px;
+  padding: 36px 32px 10px 32px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -202,37 +236,36 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: flex-start;
-  margin: 30px auto 0 auto;
-  max-width: 1100px;
+  align-items: flex-start; /* 确保顶部对齐 */
+  margin: 0px auto 0 auto;
+  max-width: 1200px; /* 调整为1200px */
   width: 100%;
-  gap: 36px;
+  /* gap: 36px; */
 }
 
 .middle-left {
   background: #fff;
   border-radius: 16px;
-  /* box-shadow: 0 2px 16px rgba(0,0,0,0.08); */
-  padding: 36px 32px 28px 32px;
+  padding: 0px 32px 28px 32px; /* 修改上内边距为0 */
   flex: 1;
   min-width: 350px;
 }
 
 .middle-right {
   background: #fff;
-  /* border-radius: 16px; */
-  /* box-shadow: 0 2px 16px rgba(0,0,0,0.08); */
   padding: 0px 32px 0px 0px;
   flex: 1;
   min-width: 320px;
 }
 
 .property-description {
-  font-size: 1.55rem;
+  font-size: 1.68rem;
   font-weight: 500;
   color: #142651;
-  line-height: 1.4;
+  line-height: 1.6;
   text-align: justify;
+  margin-top: 0; /* 确保文字没有上边距 */
+  /* padding-top: 36px; 添加上内边距来保持整体间距 */
 }
 
 .info-table {
@@ -248,23 +281,23 @@
 .bottom-section {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin: 30px auto 0 auto;
-  max-width: 1100px;
+  
+  align-items: flex-start; /* 改为顶部对齐 */
+  margin: 0px auto 0 auto;
+  max-width: 1200px; /* 调整为1200px */
   width: 100%;
   background: #fff;
   border-radius: 16px;
-  /* box-shadow: 0 2px 16px rgba(0,0,0,0.08); */
-  padding: 36px 20px 28px 20px;
-  gap: 20px;
+  padding: 5px 20px 0px 30px;
+  gap: 50px;
 }
 
 .bottom-section .data-col {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  justify-content: flex-start; /* 改为顶部对齐 */
   text-align: center;
 }
 
@@ -277,7 +310,7 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 5px;
 }
 
 .data-icon {
@@ -305,9 +338,18 @@
 }
 
 .data-value {
-  font-size: 2.4rem;
+  color: #D01123;
+  font-size: 2.5rem;
   font-weight: bold;
-  color: #d32f2f;
+  margin: 4px 0;
+  text-align: center1;
+}
+
+.data-note {
+  color: #142651;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 4px;
 }
 
 .yield-container {
@@ -323,6 +365,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 4px;
+  padding-top: 10px;
 }
 
 .yield-rate {
