@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './HomePage.css';
 import propertyData from './propertyData.json';
 import footerImage from './assets/images/footer.png';
-import loanIcon from './assets/images/贷款金额icon4.png';
+import loanIcon from './assets/images/贷款金额icon.png';
 
 const headerImages = [
   'https://www.haopou.com/static/upload/2023/202302094519.jpg',
@@ -61,7 +61,7 @@ const HomePage = () => {
       <div className="middle-section">
         <div className="middle-left">
           <div className="property-description">
-            66 Pitts Road 位于新州蓝山地区 Hartley Vale 的农场，总面积 394.48 公顷，距离悉尼 CBD 市中心 131 公里，离 Hartley 当地小镇 Towncenter5 公里，周边生活交通便利，学校设施服务齐全，当前市场估价 5,500,000 澳元；另加一套市场价值 80 万的 Strathfield 两房公寓的一级抵押。
+            项目位于新州蓝山地区 Hartley Vale 的农场，总面积 394.48 公顷，距离悉尼 CBD 市中心 131 公里，离 Hartley 当地小镇 Towncenter5 公里，周边生活交通便利，学校设施服务齐全，当前市场估价 5,500,000 澳元；另加一套市场价值 80 万的 Strathfield 两房公寓的一级抵押。
           </div>
         </div>
         <div className="middle-right">
@@ -79,7 +79,7 @@ const HomePage = () => {
               <div className="table-value">借款人其他项目的投资回款</div>
             </div>
             <div className="table-row">
-              <div className="table-label">借款开始时间(Goodland已发起)</div>
+              <div className="table-label">借款开始时间</div>
               <div className="table-value">19/01/2024</div>
             </div>
             <div className="table-row">
