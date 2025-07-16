@@ -2,8 +2,8 @@
 .container {
   width: 210mm;
   max-width: 794px;
-  margin: 0 auto;
-  padding: 10mm 12mm;
+  /* margin: 0 auto; */
+  /* padding: 10mm 12mm; */
   background: #fff;
   box-sizing: border-box;
   font-family: 'Arial', sans-serif;
@@ -108,7 +108,7 @@
 
 .top-right {
   flex: 1;
-  padding: 16px ;
+  padding: 16px 0;
   margin-left: -55px;
   background: #fff;
   border-radius: 8px;
@@ -116,7 +116,7 @@
 
 .middle-left {
   flex: 1.2;
-  padding: 0px 20px 20px 20px;
+  padding: 0px 20px 30px 20px;
   background: #fff;
   border-radius: 8px;
   margin-right: 5px;
@@ -125,11 +125,11 @@
 
 .middle-right {
   flex: 0.8;
-  padding: 0 12px;
+  padding: 0 0px 0 0;
   background: #fff;
   border-radius: 8px;
   margin-left: -40px;
-  margin-right: 10px;
+  margin-right: 40px;
   box-sizing: border-box;
 }
 
@@ -182,7 +182,9 @@
 .yield-container {
   display: flex;
   align-items: center;
-  justify-content: left;
+  justify-content: right;
+  width: 100%;
+  gap: 0px;
 }
 
 .investment-yield-container {
@@ -199,7 +201,7 @@
 }
 
 .yield-text .right-title {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #142651;
 }
@@ -221,7 +223,7 @@
 }
 
 .yield-rate .rate-num {
-  font-size: 3.5rem;
+  font-size: 4rem;
   color: #d32f2f;
   font-weight: bold;
 }
@@ -240,12 +242,12 @@
 /* Property description styles */
 .property-description {
   font-size: 1rem;
-  line-height: 1.5;
-  max-height: 220px;
+  max-height: 240px;
   overflow: hidden;
   text-align: justify;
-  padding-right: 0;
+  padding-right: 25px;
   box-sizing: border-box;
+  margin-left: -10px;
 }
 
 .property-details-text {
@@ -258,7 +260,12 @@
 
 /* Table styles */
 .info-table {
-  width: 95%;
+  width: 110%;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 0.5rem;
+  padding: 0px 0px 0px 0px;
+  border: 1px solid #fff;
   box-sizing: border-box;
 }
 
@@ -269,7 +276,7 @@
 .table-row {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1.5px solid #333;
   padding: 5px 0;
   font-size: 0.9rem;
 }
@@ -277,7 +284,7 @@
 .loan-info-row {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #333;
   padding: 5px 0;
   font-size: 0.9rem;
 }
