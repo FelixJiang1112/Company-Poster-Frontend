@@ -1,0 +1,438 @@
+/* A4 Portrait Setup */
+.container {
+  width: 210mm;
+  max-width: 794px;
+  margin: 0 auto;
+  padding: 10mm 12mm;
+  background: #fff;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+.header-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin-bottom: 16px;
+}
+
+.header-img {
+  background: #d9d9d9;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-img-el {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.mortgage-label {
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  background-color: #D01123;
+  padding: 4px 24px;
+  z-index: 2;
+}
+
+.mortgage-label span {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.mortgage-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 0.5em;
+  background: linear-gradient(to right, #D01123 0%, #D01123 50%, #142651 50%, #142651 100%);
+  z-index: 1;
+}
+
+/* Base section layout */
+.section-base {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: -30px;
+}
+
+.middle-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.bottom-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  align-items: flex-start;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+/* Base card style */
+.card-base {
+  flex: 1;
+  padding: 16px 24px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.top-left {
+  flex: 1;
+  padding: 16px 24px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.top-right {
+  flex: 1;
+  padding: 16px ;
+  margin-left: -55px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.middle-left {
+  flex: 1.2;
+  padding: 0px 20px 20px 20px;
+  background: #fff;
+  border-radius: 8px;
+  margin-right: 5px;
+  box-sizing: border-box;
+}
+
+.middle-right {
+  flex: 0.8;
+  padding: 0 12px;
+  background: #fff;
+  border-radius: 8px;
+  margin-left: -40px;
+  margin-right: 10px;
+  box-sizing: border-box;
+}
+
+/* Title styles */
+.main-title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #1a237e;
+}
+
+.location-title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #1a237e;
+}
+
+.main-title-row {
+  display: flex;
+  gap: 8px;
+}
+
+.location-subtitle-row {
+  display: flex;
+  gap: 8px;
+}
+
+.sub-title {
+  font-size: 1.6rem;
+  color: #1a237e;
+  font-weight: bold;
+}
+
+.sub-title-red {
+  color: #d32f2f;
+}
+
+.location-state {
+  font-size: 1.6rem;
+  color: #1a237e;
+  font-weight: bold;
+}
+
+.location-postcode {
+  font-size: 1.6rem;
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+/* Yield section styles */
+.yield-container {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.investment-yield-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.yield-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 10px;
+}
+
+.yield-text .right-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #142651;
+}
+
+.yield-text .right-sub {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.yield-info-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #142651;
+}
+
+.yield-info-subtitle {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.yield-rate .rate-num {
+  font-size: 3.5rem;
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+.rate-num {
+  line-height: 1;
+  margin-left: 50%;
+}
+
+.annual-return-rate {
+  font-size: 2.8rem;
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+/* Property description styles */
+.property-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  max-height: 220px;
+  overflow: hidden;
+  text-align: justify;
+  padding-right: 0;
+  box-sizing: border-box;
+}
+
+.property-details-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  max-height: 160px;
+  overflow: hidden;
+  text-align: justify;
+}
+
+/* Table styles */
+.info-table {
+  width: 95%;
+  box-sizing: border-box;
+}
+
+.loan-details-table {
+  width: 100%;
+}
+
+.table-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding: 5px 0;
+  font-size: 0.9rem;
+}
+
+.loan-info-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding: 5px 0;
+  font-size: 0.9rem;
+}
+
+.table-label, .table-value {
+  font-weight: 600;
+  color: #142651;
+  font-size: 1rem
+}
+
+.loan-label {
+  font-weight: 500;
+  color: #142651;
+}
+
+.loan-value {
+  font-weight: 500;
+  color: #142651;
+}
+
+/* Bottom section data columns */
+.data-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.data-col-loan {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.data-col-valuation {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.data-col-ratio {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.data-icon-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.data-icon img {
+  width: 36px;
+  height: 36px;
+}
+
+/* Data element styles */
+.data-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1a237e;
+}
+
+.data-title-loan {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1a237e;
+}
+
+.data-title-valuation {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1a237e;
+}
+
+.data-title-ratio {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1a237e;
+}
+
+.data-value {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #D01123;
+}
+
+.data-value-loan {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #D01123;
+}
+
+.data-value-valuation {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #D01123;
+}
+
+.data-value-ratio {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #D01123;
+}
+
+.data-note {
+  font-size: 0.9rem;
+  color: #142651;
+}
+
+.data-note-loan {
+  font-size: 0.9rem;
+  color: #142651;
+}
+
+.data-note-valuation {
+  font-size: 0.9rem;
+  color: #142651;
+}
+
+.data-note-ratio {
+  font-size: 0.9rem;
+  color: #142651;
+}
+
+.footer {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.footer-image {
+  width: 100%;
+  max-height: 120px;
+  object-fit: contain;
+}
+
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .table-row, .loan-info-row {
+    font-size: 0.85rem;
+    padding: 4px 0;
+  }
+}

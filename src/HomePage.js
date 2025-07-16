@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './HomePage.css';
-import propertyData from './propertyData.json';
+import rawData from './assets/data/formattedData.json';  // 更新为格式化后的JSON文件
 import footerImage from './assets/images/footer.png';
 import loanIcon from './assets/images/贷款金额icon.png';
 
@@ -15,12 +15,10 @@ const HomePage = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    setData(propertyData);
+    setData(rawData);
   }, []);
 
   if (!data) return <div>加载中...</div>;
-
-  const { property, loan, investment } = data;
 
   return (
     <div className="container">
@@ -33,7 +31,7 @@ const HomePage = () => {
               {idx === 2 && ( // 修改为左下角图片（索引2）
                 <>
                   <div className="mortgage-label">
-                    <span>二级抵押</span>
+                    <span>{data.mortgageType}</span>
                   </div>
                   <div className="mortgage-bar"></div>
                 </>
@@ -47,21 +45,21 @@ const HomePage = () => {
       <div className="top-section">
         <div className="top-left">
           <div className="main-title-container">
-            <div className="main-title">Guildford</div>
+            <div className="main-title">{data.location.suburb}</div>
             <div className="main-title-row">
-              <span className="sub-title">NSW</span>
-              <span className="sub-title sub-title-red">2790</span>
+              <span className="sub-title">{data.location.state}</span>
+              <span className="sub-title sub-title-red">{data.location.postcode}</span>
             </div>
           </div>
         </div>
         <div className="top-right">
           <div className="yield-container">
             <div className="yield-text">
-              <div className="right-title">年化收益净回报</div>
-              <div className="right-sub">(固定年化，每月付息）</div>
+              <div className="right-title">{data.investment.annualReturn.type}</div>
+              <div className="right-sub">({data.investment.annualReturn.note})</div>
             </div>
             <div className="yield-rate">
-              <span className="rate-num">14.4%</span>
+              <span className="rate-num">{data.investment.annualReturn.rate}</span>
             </div>
           </div>
         </div>
@@ -71,38 +69,38 @@ const HomePage = () => {
       <div className="middle-section">
         <div className="middle-left">
           <div className="property-description">
-            位于悉尼中央商务区以西约25公里，抵押资产为一栋1955年建成的独立住宅，Torrens产权，设有2间卧室、1间浴室和1个停车位，土地面积537平方米，室内面积101平方米。Guildford区域独立屋市场活跃，中位价为123万澳元，过去12个月增长7.2%，房产平均挂牌时间为52天，全年成交量达153套(平均每月13套)，整体流动性稳定，属于悉尼西区较具需求的住宅板块之一。          
+            {data.propertyDescription}
           </div>
         </div>
         <div className="middle-right">
           <div className="info-table">
             <div className="table-row">
               <div className="table-label">贷款性质</div>
-              <div className="table-value">过桥贷款</div>
+              <div className="table-value">{data.loanDetails.loanNature}</div>
             </div>
             <div className="table-row">
               <div className="table-label">贷款用途</div>
-              <div className="table-value">商业投资机会</div>
+              <div className="table-value">{data.loanDetails.loanPurpose}</div>
             </div>
             <div className="table-row">
               <div className="table-label">退出机制</div>
-              <div className="table-value">借款人其他项目的投资回款</div>
+              <div className="table-value">{data.loanDetails.exitMechanism}</div>
             </div>
             <div className="table-row">
               <div className="table-label">借款开始时间</div>
-              <div className="table-value">19/01/2024</div>
+              <div className="table-value">{data.loanDetails.startDate}</div>
             </div>
             <div className="table-row">
               <div className="table-label">预计还款时间</div>
-              <div className="table-value">18/01/2025</div>
+              <div className="table-value">{data.loanDetails.endDate}</div>
             </div>
             <div className="table-row">
               <div className="table-label">借款周期</div>
-              <div className="table-value">12个月</div>
+              <div className="table-value">{data.loanDetails.loanTerm}</div>
             </div>
             <div className="table-row">
               <div className="table-label">最低投资金额</div>
-              <div className="table-value">$100,000</div>
+              <div className="table-value">{data.loanDetails.minimumInvestment}</div>
             </div>
           </div>
         </div>
@@ -117,8 +115,8 @@ const HomePage = () => {
             </div>
             <div className="data-title">贷款金额</div>
           </div>
-          <div className="data-value">$2,000,000</div>
-          <div className="data-note">(一押银行ANZ $506,631)</div>
+          <div className="data-value">{data.financialMetrics.loanAmount.value}</div>
+          <div className="data-note">({data.financialMetrics.loanAmount.note})</div>
         </div>
         <div className="data-col">
           <div className="data-icon-title-row">
@@ -127,8 +125,8 @@ const HomePage = () => {
             </div>
             <div className="data-title">项目估价</div>
           </div>
-          <div className="data-value">$5,900,000</div>
-          <div className="data-note">(地块分割后价值约 $12,000,000)</div>
+          <div className="data-value">{data.financialMetrics.propertyValue.currentValue}</div>
+          <div className="data-note">({data.financialMetrics.propertyValue.potentialValue})</div>
         </div>
         <div className="data-col">
           <div className="data-icon-title-row">
@@ -137,8 +135,8 @@ const HomePage = () => {
             </div>
             <div className="data-title">LVR 借贷比</div>
           </div>
-          <div className="data-value">33%</div>
-          <div className="data-note">(地块分割后 LVR 17%)</div>
+          <div className="data-value">{data.financialMetrics.lvrRatio.current}</div>
+          <div className="data-note">({data.financialMetrics.lvrRatio.potential})</div>
         </div>
       </div>
 
