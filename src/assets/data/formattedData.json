@@ -1,0 +1,39 @@
+{
+  "location": {
+    "suburb": "Guildford",
+    "state": "NSW",
+    "postcode": "2790"
+  },
+  "propertyDescription": "位于悉尼中央商务区以西约 25 公里，抵押资产为一栋 1955 年建成的独立住宅， Torrens 产权，设有 2 间卧室、 1 间浴室和 1 个停车位，土地面积 537 平方米，室内面积 101 平方米。 Guildford 区域独立屋市场活跃，中位价为 123 万澳元，过去 12 个月增长 7.2 %，房产平均挂牌时间为 52 天，全年成交量达 153 套(平均每月 13 套)，整体流动性稳定，属于悉尼西区较具需求的住宅板块之一。",
+  "investment": {
+    "annualReturn": {
+      "rate": "14.4%",
+      "type": "年化收益净回报",
+      "note": "固定年化，每月付息"
+    }
+  },
+  "loanDetails": {
+    "loanNature": "过桥贷款",
+    "loanPurpose": "商业投资机会",
+    "exitMechanism": "借款人其他项目的投资回款",
+    "startDate": "19/01/2024",
+    "endDate": "18/01/2025",
+    "loanTerm": "12个月",
+    "minimumInvestment": "$100,000"
+  },
+  "financialMetrics": {
+    "loanAmount": {
+      "value": "$2,000,000",
+      "note": "一押银行ANZ $506,631"
+    },
+    "propertyValue": {
+      "currentValue": "$5,900,000",
+      "potentialValue": "地块分割后价值约 $12,000,000"
+    },
+    "lvrRatio": {
+      "current": "33%",
+      "potential": "地块分割后 LVR 17%"
+    }
+  },
+  "mortgageType": "二级抵押"
+}
