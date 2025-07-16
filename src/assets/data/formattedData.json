@@ -15,7 +15,7 @@
   "loanDetails": {
     "loanNature": "过桥贷款",
     "loanPurpose": "商业投资机会",
-    "exitMechanism": "借款人其他项目的投资回款",
+    "exitMechanism": "转贷到银行",
     "startDate": "19/01/2024",
     "endDate": "18/01/2025",
     "loanTerm": "12个月",
