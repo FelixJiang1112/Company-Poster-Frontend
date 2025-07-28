@@ -25,48 +25,7 @@ const HomePageA4 = () => {
   const [dataList, setDataList] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(true);
-  const [language, setLanguage] = useState('zh'); // 'zh' for Chinese, 'en' for English
   const containerRef = useRef(null);
-
-  // Translation object
-  const translations = {
-    zh: {
-      loading: '加载中...',
-      exportImage: '导出图片',
-      languageToggle: 'EN',
-      annualReturn: '年化收益率',
-      annualReturnNote: '（固定年化，每月付息）',
-      loanNature: '贷款性质',
-      loanPurpose: '贷款用途',
-      exitStrategy: '退出机制',
-      loanStartDate: '借款开始时间',
-      loanRepaymentDate: '预计还款时间',
-      loanTerm: '借款周期',
-      loanAmount: '贷款金额',
-      propertyValue: '项目估价',
-      lvrRatio: 'LVR 借贷比',
-      exportFailed: '导出图片失败，请重试'
-    },
-    en: {
-      loading: 'Loading...',
-      exportImage: 'Export Image',
-      languageToggle: '中文',
-      annualReturn: 'Annual Rate',
-      annualReturnNote: '(Fixed annual rate, monthly interest)',
-      loanNature: 'Loan Nature',
-      loanPurpose: 'Loan Purpose',
-      exitStrategy: 'Exit Strategy',
-      loanStartDate: 'Loan Start Date',
-      loanRepaymentDate: 'Expected Repayment Date',
-      loanTerm: 'Loan Term',
-      loanAmount: 'Loan Amount',
-      propertyValue: 'Property Value',
-      lvrRatio: 'LVR Ratio',
-      exportFailed: 'Export failed, please try again'
-    }
-  };
-
-  const t = translations[language];
 
   useEffect(() => {
     fetch('http://localhost:5000/api/data')
@@ -81,12 +40,8 @@ const HomePageA4 = () => {
       });
   }, []);
 
-  const toggleLanguage = () => {
-    setLanguage(prev => prev === 'zh' ? 'en' : 'zh');
-  };
-
   if (loading || !dataList.length) {
-    return <div>{t.loading}</div>;
+    return <div>加载中...</div>;
   }
 
   const data = dataList[currentIndex];
@@ -95,10 +50,8 @@ const HomePageA4 = () => {
     if (containerRef.current) {
       try {
         const exportButton = document.querySelector('.export-button');
-        const languageToggleButton = document.querySelector('.language-toggle-button');
         if (exportButton) {
           exportButton.style.display = 'none';
-          languageToggleButton.style.display = 'none';
         }
 
         const canvas = await html2canvas(containerRef.current, {
@@ -123,12 +76,9 @@ const HomePageA4 = () => {
         if (exportButton) {
           exportButton.style.display = 'block';
         }
-        if (languageToggleButton) {
-          languageToggleButton.style.display = 'block';
-        }
       } catch (error) {
         console.error('导出图片失败:', error);
-        alert(t.exportFailed);
+        alert('导出图片失败，请重试');
         
         const exportButton = document.querySelector('.export-button');
         if (exportButton) {
@@ -175,9 +125,9 @@ const HomePageA4 = () => {
             <div className="yield-container">
               <div className="yield-text">
                 {/* <div className="right-title">{data.investment.annualReturn.type}</div> */}
-                <div className="right-title">{t.annualReturn}</div>
+                <div className="right-title">年化收益率</div>
                 {/* <div className="right-sub">({data.investment.annualReturn.note})</div> */}
-                <div className="right-sub">{t.annualReturnNote}</div>
+                <div className="right-sub">（固定年化，每月付息）</div>
               </div>
               <div className="yield-rate">
                 <span className="rate-num">{data.interest_rate}</span>
@@ -189,18 +139,18 @@ const HomePageA4 = () => {
         <div className="middle-section">
           <div className="middle-left">
             <div className="property-description">
-              {data.property_info?.en || data.property_info?.cn}
+              {data.info_cn}
             </div>
           </div>
           <div className="middle-right">
             <div className="info-table">
               {[
-                [t.loanNature, data.loan_nature?.en || data.loan_nature],
-                [t.loanPurpose, data.loan_purpose?.en || data.loan_purpose],
-                [t.exitStrategy, data.exit_strategy?.en || data.exit_strategy],
-                [t.loanStartDate, data.loan_start_date],
-                [t.loanRepaymentDate, data.loan_repayment_date],
-                [t.loanTerm, data.loan_term],
+                ['贷款性质', data.loan_nature],
+                ['贷款用途', data.loan_purpose.en],
+                ['退出机制', data.exit_strategy.en],
+                ['借款开始时间', data.loan_start_date],
+                ['预计还款时间', data.loan_repayment_date],
+                ['借款周期', data.loan_term],
               ].map(([label, value], idx) => (
                 <div className="table-row" key={idx}>
                   <div className="table-label">{label}</div>
@@ -218,9 +168,9 @@ const HomePageA4 = () => {
             ['LVR 借贷比', data.lvr_ration, data.financialMetrics.lvrRatio.potential, lvrIcon], 
           ].map(([title, value, note, icon], idx) => (*/}
           {[
-            [t.loanAmount, data.loan_amount, loanIcon],
-            [t.propertyValue, data.security_value, projectIcon],
-            [t.lvrRatio, data.lvr_ration, lvrIcon], 
+            ['贷款金额', data.loan_amount, loanIcon],
+            ['项目估价', data.security_value, projectIcon],
+            ['LVR 借贷比', data.lvr_ration, lvrIcon], 
           ].map(([title, value,icon], idx) => (
             <div className={`data-col data-col-${idx + 1}`} key={idx}>
               <div className="data-icon-title-row">
@@ -260,30 +210,7 @@ const HomePageA4 = () => {
         onMouseOver={(e) => e.target.style.backgroundColor = '#0056b3'}
         onMouseOut={(e) => e.target.style.backgroundColor = '#007bff'}
       >
-        {t.exportImage}
-      </button>
-      
-      <button 
-        className="language-toggle-button"
-        onClick={toggleLanguage}
-        style={{
-          position: 'fixed',
-          top: '20px',
-          right: '160px',
-          backgroundColor: '#28a745',
-          color: 'white',
-          border: 'none',
-          borderRadius: '8px',
-          padding: '12px 20px',
-          fontSize: '16px',
-          cursor: 'pointer',
-          zIndex: 1000,
-          boxShadow: '0 2px 8px rgba(0,0,0,0.2)'
-        }}
-        onMouseOver={(e) => e.target.style.backgroundColor = '#218838'}
-        onMouseOut={(e) => e.target.style.backgroundColor = '#28a745'}
-      >
-        {t.languageToggle}
+        导出图片
       </button>
     </div>
   );

@@ -80,7 +80,7 @@
   color: #d32f2f;
   font-weight: bold;
   line-height: 1;
-  margin-left: 25%
+  /* margin-left: 25% */
 }
 .right-sub {
   font-size: 1.35rem;
@@ -204,7 +204,6 @@
   margin: 0px auto 0 auto;
   max-width: 1200px; /* 调整为1200px */
   width: 100%;
-  gap: 20px;
 }
 
 .top-left {
@@ -240,13 +239,13 @@
   margin: 0px auto 0 auto;
   max-width: 1200px; /* 调整为1200px */
   width: 100%;
-  /* gap: 36px; */
+  gap: 10px;
 }
 
 .middle-left {
   background: #fff;
   border-radius: 16px;
-  padding: 0px 32px 28px 32px; /* 修改上内边距为0 */
+  padding: 0px 0px 28px 32px; /* 修改上内边距为0 */
   flex: 1;
   min-width: 350px;
 }
@@ -288,7 +287,7 @@
   width: 100%;
   background: #fff;
   border-radius: 16px;
-  padding: 5px 20px 0px 30px;
+  /* padding: 5px 20px 0px 30px; */
   gap: 50px;
 }
 
@@ -298,19 +297,19 @@
   flex-direction: column;
   /* align-items: center; */
   justify-content: flex-start; /* 改为顶部对齐 */
-  text-align: center;
+  /* text-align: left; */
 }
 
-.bottom-section .data-col:not(:last-child) {
+/* .bottom-section .data-col:not(:last-child) {
   border-right: 1px solid #e0e0e0;
-}
+} */
 
 .data-icon-title-row {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
-  margin-bottom: 5px;
+  /* margin-bottom: 5px; */
 }
 
 .data-icon {
@@ -342,7 +341,7 @@
   font-size: 2.5rem;
   font-weight: bold;
   margin: 4px 0;
-  text-align: center1;
+  /* text-align: left; */
 }
 
 .data-note {

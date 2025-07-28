@@ -31,3 +31,13 @@ yarn-error.log*
 
 # OS
 Thumbs.db
+
+# virtual environment
+/goodland
+
+# tempfile
+temp copy.json
+temp.json
+
+# CLAUDE file
+CLAUDE.md
