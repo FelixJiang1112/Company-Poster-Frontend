@@ -63,3 +63,6 @@ cursor_metadata.pb
 logs/
 uploads/
 data/
+temp.json
+temp copy.json
+CLAUDE.md
