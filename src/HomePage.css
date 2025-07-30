@@ -1,0 +1,375 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 210mm;
+  height: 297mm;
+  margin: 0 auto;
+  background: #fff;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* 旧样式已移除，使用新的 .top-section, .middle-section, .bottom-section */
+
+.circle-badge {
+  background: #d32f2f;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  /* box-shadow: 0 2px 8px rgba(211,47,47,0.12); */
+}
+
+.main-title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.main-title-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.main-title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #1a237e;
+  line-height: 1.1;
+}
+.main-title-red {
+  color: #d32f2f;
+}
+
+.sub-title {
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: #1a237e;
+  line-height: 1.1;
+}
+.sub-title-red {
+  color: #d32f2f;
+}
+
+/* 旧样式已移除，使用新的布局样式 */
+.right-title-row {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 18px;
+}
+.right-title {
+  font-size: 2.3rem;
+  color: #142651;
+  font-weight: bold;
+  margin: 0;
+}
+.right-rate {
+  margin-bottom: 2px;
+}
+.rate-num {
+  font-size: 6rem;
+  color: #d32f2f;
+  font-weight: bold;
+  line-height: 1;
+  /* margin-left: 25% */
+}
+.right-sub {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #142651;
+  margin: 0;
+}
+/* 旧样式已合并到 .info-table */
+.table-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1.5px solid #333;
+}
+.table-row:first-child {
+  border-top: 1.5px solid #333;
+}
+.table-row:last-child {
+  border-bottom: 1.5px solid #333;
+}
+.table-label {
+  color: #142651;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+.table-value {
+  color: #142651;
+  font-weight: 600;
+  font-size: 1.3rem;
+  text-align: right;
+}
+
+.header-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px;
+  padding: 32px 0 0 0;
+  background: #fff;
+  max-width: 1200px; /* 调整为1200px */
+  width: 100%;
+  margin: 0 auto;
+  position: relative; /* 添加相对定位 */
+}
+
+.header-img {
+  background: #d9d9d9;
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: #888;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.header-img-el {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.mortgage-label {
+  position: absolute;
+  bottom: 8px; /* 调整标签位置 */
+  left: 0;
+  background-color: #D01123;
+  padding: 4px 24px; /* 减小上下内边距 */
+  z-index: 2;
+}
+
+.mortgage-label span {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.mortgage-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%; /* 让长度横跨两张图片 */
+  height: 0.7em; /* 减小高度 */
+  background: linear-gradient(to right, #D01123 0%, #D01123 50%, #142651 50%, #142651 100%);
+  z-index: 1;
+}
+
+.footer {
+  background: transparent;
+  color: #fff;
+  text-align: center;
+  padding: 0;
+  margin-top: 40px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.footer-image {
+  width: 100%;
+  height: auto;
+  max-width: 1200px; /* 调整为1200px */
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  /* 确保没有其他可能导致锐化的属性 */
+}
+
+/* 旧样式已移除，使用新的 .bottom-section */
+
+/* 顶部区域：左边标题，右边年化收益 */
+.top-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0px auto 0 auto;
+  max-width: 1200px; /* 调整为1200px */
+  width: 100%;
+}
+
+.top-left {
+  background: #fff;
+  border-radius: 16px;
+  /* box-shadow: 0 2px 16px rgba(0,0,0,0.08); */
+  padding: 36px 32px 10px 32px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 350px;
+}
+
+.top-right {
+  background: #fff;
+  border-radius: 16px;
+  /* box-shadow: 0 2px 16px rgba(0,0,0,0.08); */
+  padding: 36px 32px 28px 32px;
+  flex: 1;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 中间区域：左边介绍，右边列表 */
+.middle-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start; /* 确保顶部对齐 */
+  margin: 0px auto 0 auto;
+  max-width: 1200px; /* 调整为1200px */
+  width: 100%;
+  gap: 10px;
+}
+
+.middle-left {
+  background: #fff;
+  border-radius: 16px;
+  padding: 0px 0px 28px 32px; /* 修改上内边距为0 */
+  flex: 1;
+  min-width: 350px;
+}
+
+.middle-right {
+  background: #fff;
+  padding: 0px 32px 0px 0px;
+  flex: 1;
+  min-width: 320px;
+}
+
+.property-description {
+  font-size: 1.68rem;
+  font-weight: 500;
+  color: #142651;
+  line-height: 1.6;
+  text-align: justify;
+  margin-top: 0; /* 确保文字没有上边距 */
+  /* padding-top: 36px; 添加上内边距来保持整体间距 */
+}
+
+.info-table {
+  width: 100%;
+  border-radius: 8px;
+  background: #fff;
+  padding: 0px 16px;
+  font-size: 0.5rem;
+  border: 1px solid #fff;
+}
+
+/* 底部区域：三列数据 */
+.bottom-section {
+  display: flex;
+  justify-content: space-between;
+  
+  align-items: flex-start; /* 改为顶部对齐 */
+  margin: 0px auto 0 auto;
+  max-width: 1200px; /* 调整为1200px */
+  width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  /* padding: 5px 20px 0px 30px; */
+  gap: 50px;
+}
+
+.bottom-section .data-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: flex-start; /* 改为顶部对齐 */
+  /* text-align: left; */
+}
+
+/* .bottom-section .data-col:not(:last-child) {
+  border-right: 1px solid #e0e0e0;
+} */
+
+.data-icon-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  /* margin-bottom: 5px; */
+}
+
+.data-icon {
+  width: 48px;
+  height: 48px;
+  background: #1a237e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.icon-img {
+  width: 50px;
+  height: 50px;
+}
+
+.data-title {
+  font-size: 2.2rem;
+  color: #1a237e;
+  font-weight: bold;
+  margin-bottom: 0;
+  letter-spacing: 0.5px;
+}
+
+.data-value {
+  color: #D01123;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 4px 0;
+  /* text-align: left; */
+}
+
+.data-note {
+  color: #142651;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.yield-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+
+.yield-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  padding-top: 10px;
+}
+
+.yield-rate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left:-10%
+}

@@ -1,0 +1,75 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+dist/
+/build
+build/
+
+# misc
+.DS_Store
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+
+# virtual environment
+/goodland
+
+# tempfile
+temp copy.json
+temp.json
+
+# CLAUDE file
+CLAUDE.md
+
+# Python 缓存和虚拟环境
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+
+# Flask/Python环境相关
+*.db
+instance/
+*.sqlite3
+
+# VSCode 插件调试缓存（可选）
+.vscode-test/
+
+# JSON 缓存和临时翻译文件
+*.tmp.json
+*.bak
+*.cache
+*.old.json
+
+# Mac/Linux 临时文件
+*.~*
+*.sw?
+
+# Webpack/Parcel 临时文件
+.cache/

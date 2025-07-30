@@ -1,0 +1,688 @@
+.carlingford-NSW {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.carlingford-NSW .div {
+  background-color: #ffffff;
+  height: 842px;
+  overflow: hidden;
+  position: relative;
+  width: 595px;
+}
+
+.carlingford-NSW .overlap {
+  height: 349px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 595px;
+}
+
+.carlingford-NSW .frame {
+  height: 335px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 595px;
+}
+
+.carlingford-NSW .div-wrapper {
+  align-items: center;
+  background-color: #d01123;
+  display: inline-flex;
+  gap: 10px;
+  justify-content: center;
+  left: 0;
+  padding: 6px 24px;
+  position: absolute;
+  top: 299px;
+}
+
+.carlingford-NSW .text-wrapper {
+  color: #ffffff;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.carlingford-NSW .group-wrapper {
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 317px;
+  width: 595px;
+}
+
+.carlingford-NSW .group {
+  background-image: url(./image.svg);
+  background-size: 100% 100%;
+  height: 5px;
+  position: relative;
+  top: 15px;
+}
+
+.carlingford-NSW .vector {
+  height: 5px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 298px;
+}
+
+.carlingford-NSW .frame-2 {
+  align-items: flex-start;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 2px;
+  left: 275px;
+  position: absolute;
+  top: 380px;
+}
+
+.carlingford-NSW .text-wrapper-2 {
+  color: var(--variable-collection-dark);
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.carlingford-NSW .text-wrapper-3 {
+  color: var(--variable-collection-dark);
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  width: fit-content;
+}
+
+.carlingford-NSW .text-wrapper-4 {
+  color: #d01123;
+  font-family: "Inter-Bold", Helvetica;
+  font-size: 56px;
+  font-weight: 700;
+  left: 424px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 363px;
+}
+
+.carlingford-NSW .p {
+  color: var(--variable-collection-dark);
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 40px;
+  font-weight: 600;
+  left: 28px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 363px;
+}
+
+.carlingford-NSW .span {
+  color: #142651;
+}
+
+.carlingford-NSW .text-wrapper-5 {
+  color: #142651;
+  font-size: 32px;
+}
+
+.carlingford-NSW .text-wrapper-6 {
+  color: #d01123;
+  font-size: 32px;
+}
+
+.carlingford-NSW .element-balaka-drive-wrapper {
+  height: 161px;
+  left: 27px;
+  position: absolute;
+  top: 473px;
+  width: 271px;
+}
+
+.carlingford-NSW .element-balaka-drive {
+  color: var(--variable-collection-dark);
+  font-family: "Inter-Medium", Helvetica;
+  font-size: 14px;
+  font-weight: 500;
+  left: 0;
+  line-height: 20px;
+  position: absolute;
+  text-align: justify;
+  top: 0;
+  width: 269px;
+}
+
+.carlingford-NSW .text-wrapper-7 {
+  letter-spacing: -0.08px;
+}
+
+.carlingford-NSW .text-wrapper-8 {
+  letter-spacing: 0;
+}
+
+.carlingford-NSW .frame-wrapper {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  left: 309px;
+  padding: 4px 0px 0px;
+  position: absolute;
+  top: 469px;
+  width: 262px;
+}
+
+.carlingford-NSW .frame-3 {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+  width: 100%;
+}
+
+.carlingford-NSW .img {
+  align-self: stretch;
+  height: 1px;
+  margin-top: -0.29px;
+  position: relative;
+  width: 100%;
+}
+
+.carlingford-NSW .frame-4 {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  height: 18px;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+.carlingford-NSW .vector-2 {
+  align-self: stretch;
+  height: 1px;
+  position: relative;
+  width: 100%;
+}
+
+.carlingford-NSW .vector-3 {
+  align-self: stretch;
+  height: 1px;
+  margin-bottom: -0.72px;
+  position: relative;
+  width: 100%;
+}
+
+.carlingford-NSW .overlap-group {
+  height: 79px;
+  left: 20px;
+  position: absolute;
+  top: 667px;
+  width: 386px;
+}
+
+.carlingford-NSW .overlap-2 {
+  height: 79px;
+  left: 4px;
+  position: absolute;
+  top: 0;
+  width: 382px;
+}
+
+.carlingford-NSW .frame-5 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 164px;
+}
+
+.carlingford-NSW .frame-6 {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+}
+
+.carlingford-NSW .frame-7 {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 6px;
+  position: relative;
+}
+
+.carlingford-NSW .frame-8 {
+  height: 30px;
+  position: relative;
+  width: 30px;
+}
+
+.carlingford-NSW .text-wrapper-9 {
+  color: var(--variable-collection-dark);
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  width: fit-content;
+}
+
+.carlingford-NSW .vector-4 {
+  height: 79px;
+  left: 163px;
+  position: absolute;
+  top: 0;
+  width: 1px;
+}
+
+.carlingford-NSW .frame-9 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  left: 162px;
+  position: absolute;
+  top: 0;
+  width: 220px;
+}
+
+.carlingford-NSW .frame-10 {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 4px;
+  position: relative;
+}
+
+.carlingford-NSW .text-wrapper-10 {
+  color: #d01123;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.carlingford-NSW .text-wrapper-11 {
+  color: #d01123;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 20px;
+  font-weight: 600;
+  left: 11px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 33px;
+  white-space: nowrap;
+}
+
+.carlingford-NSW .text-wrapper-12 {
+  color: var(--variable-collection-dark);
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 12px;
+  font-weight: 600;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 61px;
+}
+
+.carlingford-NSW .overlap-3 {
+  height: 79px;
+  left: 407px;
+  position: absolute;
+  top: 667px;
+  width: 164px;
+}
+
+.carlingford-NSW .vector-5 {
+  height: 79px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1px;
+}
+
+.carlingford-NSW .frame-11 {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 164px;
+}
+
+.carlingford-NSW .overlap-4 {
+  height: 84px;
+  left: 0;
+  position: absolute;
+  top: 758px;
+  width: 595px;
+}
+
+.carlingford-NSW .overlap-group-wrapper {
+  height: 84px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 595px;
+}
+
+.carlingford-NSW .overlap-group-2 {
+  height: 84px;
+  position: relative;
+}
+
+.carlingford-NSW .vector-6 {
+  height: 19px;
+  left: 389px;
+  position: absolute;
+  top: 0;
+  width: 20px;
+}
+
+.carlingford-NSW .vector-7 {
+  height: 74px;
+  left: 0;
+  position: absolute;
+  top: 10px;
+  width: 595px;
+}
+
+.carlingford-NSW .vector-8 {
+  height: 84px;
+  left: 402px;
+  position: absolute;
+  top: 0;
+  width: 193px;
+}
+
+.carlingford-NSW .frame-12 {
+  align-items: center;
+  display: inline-flex;
+  gap: 9.3px;
+  left: 440px;
+  position: absolute;
+  top: 19px;
+}
+
+.carlingford-NSW .image {
+  height: 50px;
+  position: relative;
+  width: 50px;
+}
+
+.carlingford-NSW .group-2 {
+  height: 44px;
+  margin-right: -2.00px;
+  position: relative;
+  width: 74px;
+}
+
+.carlingford-NSW .text-wrapper-13 {
+  color: #ffffff;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+}
+
+.carlingford-NSW .frame-13 {
+  align-items: flex-start;
+  display: inline-flex;
+  gap: 24px;
+  left: 24px;
+  position: absolute;
+  top: 25px;
+}
+
+.carlingford-NSW .frame-14 {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  height: 44px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.carlingford-NSW .element {
+  height: 25.94px;
+  position: relative;
+  width: 84px;
+}
+
+.carlingford-NSW .overlap-5 {
+  height: 26px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 30px;
+}
+
+.carlingford-NSW .vector-9 {
+  height: 10px;
+  left: 21px;
+  position: absolute;
+  top: 15px;
+  width: 9px;
+}
+
+.carlingford-NSW .vector-10 {
+  height: 21px;
+  left: 1px;
+  position: absolute;
+  top: 0;
+  width: 22px;
+}
+
+.carlingford-NSW .vector-11 {
+  height: 14px;
+  left: 0;
+  position: absolute;
+  top: 12px;
+  width: 21px;
+}
+
+.carlingford-NSW .overlap-group-3 {
+  height: 14px;
+  left: 31px;
+  position: absolute;
+  top: 12px;
+  width: 53px;
+}
+
+.carlingford-NSW .vector-12 {
+  height: 10px;
+  left: 0;
+  position: absolute;
+  top: 3px;
+  width: 9px;
+}
+
+.carlingford-NSW .vector-13 {
+  height: 14px;
+  left: 9px;
+  position: absolute;
+  top: 0;
+  width: 11px;
+}
+
+.carlingford-NSW .vector-14 {
+  height: 13px;
+  left: 18px;
+  position: absolute;
+  top: 0;
+  width: 7px;
+}
+
+.carlingford-NSW .vector-15 {
+  height: 10px;
+  left: 24px;
+  position: absolute;
+  top: 3px;
+  width: 9px;
+}
+
+.carlingford-NSW .vector-16 {
+  height: 10px;
+  left: 32px;
+  position: absolute;
+  top: 3px;
+  width: 11px;
+}
+
+.carlingford-NSW .vector-17 {
+  height: 14px;
+  left: 43px;
+  position: absolute;
+  top: 0;
+  width: 11px;
+}
+
+.carlingford-NSW .text-wrapper-14 {
+  color: #ffffff;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.carlingford-NSW .vector-18 {
+  align-self: stretch;
+  position: relative;
+  width: 1px;
+}
+
+.carlingford-NSW .frame-15 {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+}
+
+.carlingford-NSW .ant-design-phone-wrapper {
+  height: 12px;
+  overflow: hidden;
+  position: relative;
+  transform: rotate(180deg);
+  width: 12px;
+}
+
+.carlingford-NSW .ant-design-phone {
+  height: 12px;
+  position: relative;
+}
+
+.carlingford-NSW .vector-19 {
+  height: 10px;
+  left: 1px;
+  position: absolute;
+  top: 1px;
+  transform: rotate(-180deg);
+  width: 10px;
+}
+
+.carlingford-NSW .text-wrapper-15 {
+  color: var(--white);
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: -0.20px;
+  line-height: normal;
+  margin-top: -0.83px;
+  position: relative;
+  width: fit-content;
+}
+
+.carlingford-NSW .div-2 {
+  height: 12px;
+  position: relative;
+  width: 12px;
+}
+
+.carlingford-NSW .vector-20 {
+  height: 7px;
+  left: 1px;
+  position: absolute;
+  top: 2px;
+  width: 10px;
+}
+
+.carlingford-NSW .frame-16 {
+  align-items: flex-start;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 6px;
+  position: relative;
+  width: 198.33px;
+}
+
+.carlingford-NSW .solid-location {
+  background-image: url(./vector-18.svg);
+  background-size: 100% 100%;
+  height: 9px;
+  left: 2px;
+  position: relative;
+  top: 1px;
+  width: 7px;
+}
+
+.carlingford-NSW .text-wrapper-16 {
+  color: var(--white);
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: -0.20px;
+  line-height: normal;
+  margin-right: -5.67px;
+  margin-top: -0.83px;
+  position: relative;
+  width: fit-content;
+}
