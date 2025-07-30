@@ -1,75 +1,65 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-
-# production
+# ================================
+# ✅ Node.js / React / Vite
+# ================================
+node_modules/
 dist/
-/build
 build/
-
-# misc
-.DS_Store
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+goodland/
+.cache/
+.vite/
+.next/
+.eslintcache
 *.log
 
-# IDEs
-.vscode/
-.idea/
-*.swp
-*.swo
+# ================================
+# ✅ TypeScript & Babel 产物
+# ================================
+*.tsbuildinfo
+*.d.ts
+*.d.ts.map
+*.js.map
+*.jsx.map
+*.ts.map
+*.map
 
-# OS
-Thumbs.db
-
-# virtual environment
-/goodland
-
-# tempfile
-temp copy.json
-temp.json
-
-# CLAUDE file
-CLAUDE.md
-
-# Python 缓存和虚拟环境
+# ================================
+# ✅ Python / Flask
+# ================================
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
+*.pyc
 *.so
 *.egg-info/
-
-# Flask/Python环境相关
+*.sqlite3
 *.db
 instance/
-*.sqlite3
+.env
+.env.*
 
-# VSCode 插件调试缓存（可选）
-.vscode-test/
-
-# JSON 缓存和临时翻译文件
-*.tmp.json
-*.bak
-*.cache
-*.old.json
-
-# Mac/Linux 临时文件
-*.~*
+# ================================
+# ✅ 编辑器 & 系统缓存
+# ================================
+.vscode/
+.idea/
 *.sw?
+*.swo
+.DS_Store
+Thumbs.db
 
-# Webpack/Parcel 临时文件
-.cache/
+# ================================
+# ✅ 临时文件 / 自定义脚本缓存
+# ================================
+*.bak
+*.tmp
+*.tmp.json
+*.old
+cursor_metadata.pb
+
+# ================================
+# ✅ 其他大文件或你自定义的目录
+# ================================
+logs/
+uploads/
+data/
