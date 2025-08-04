@@ -99,7 +99,7 @@ const HomePageA4_EN = ({ dataList, currentIndex, onLanguageToggle, onNext, onPre
   };
 
   return (
-    <div className="container" ref={containerRef}>
+    <div className={'container lang-en'} ref={containerRef}>
       <header className="header-grid">
         {headerImages.map((img, idx) => (
           <div className="header-img" key={idx}>
@@ -133,7 +133,7 @@ const HomePageA4_EN = ({ dataList, currentIndex, onLanguageToggle, onNext, onPre
             <div className="yield-container">
               <div className="yield-text">
                 <div className="right-title">Annual Rate</div>
-                <div className="right-sub">(Fixed annual rate, monthly interest)</div>
+                {/* <div className="right-sub">(Fixed annual rate, monthly interest)</div> */}
               </div>
               <div className="yield-rate">
                 <span className="rate-num">{data.interest_rate}</span>

@@ -244,7 +244,8 @@
 }
 
 /* Property description styles */
-.property-description {
+/* 中文样式 */
+.lang-zh .property-description {
   font-size: 1rem;
   max-height: 300px;
   overflow: hidden;
@@ -252,6 +253,18 @@
   /* padding-right: 25px; */
   box-sizing: border-box;
   text-align: left;
+}
+
+/* Property description styles */
+/* English css style */
+.lang-en .property-description {
+  font-size: 0.8rem;
+  max-height: 300px;
+  overflow: hidden;
+  text-align: justify;
+  box-sizing: border-box;
+  text-align: left;
+  font-weight: 600;
 }
 
 .property-details-text {
@@ -297,6 +310,12 @@
   font-weight: 600;
   color: #142651;
   font-size: 1rem
+}
+
+.lang-en, .table-label, .table-value {
+  font-weight: 600;
+  color: #142651;
+  font-size: 0.9rem
 }
 
 .loan-label {
@@ -379,10 +398,10 @@
   align-self: center;
 }
 
-.data-col .data-value {
+/* .data-col .data-value {
   text-align: center;
   align-self: center;
-}
+} */
 
 .data-icon-title-row {
   display: flex;
