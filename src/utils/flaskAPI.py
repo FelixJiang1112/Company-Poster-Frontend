@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-with open('./src/assets/data/english_to_chinese.json', 'r', encoding='utf-8') as f:
+with open('./src/utils/english_to_chinese.json', 'r', encoding='utf-8') as f:
     EN_TO_CN_MAPPING = json.load(f)
 
 
