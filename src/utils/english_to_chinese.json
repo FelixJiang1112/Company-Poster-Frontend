@@ -13,7 +13,7 @@
     "Working Capital": "商业营运资金",
     "Purchasing": "购置贷款",
 
-    "Cash Flow Income": "现金流还款",
-    "Property Sale": "物业出售",
-    "Refinance (Exit)": "转贷退出"  
+    "Cashflow Income": "现金流还款",
+    "Property Sales": "物业出售",
+    "Refinance": "转贷退出"  
 }

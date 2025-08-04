@@ -244,14 +244,27 @@
 }
 
 /* Property description styles */
-.property-description {
+/* 中文样式 */
+.lang-zh .property-description {
   font-size: 1rem;
-  max-height: 240px;
+  max-height: 300px;
   overflow: hidden;
   text-align: justify;
   /* padding-right: 25px; */
   box-sizing: border-box;
   text-align: left;
+}
+
+/* Property description styles */
+/* English css style */
+.lang-en .property-description {
+  font-size: 0.8rem;
+  max-height: 300px;
+  overflow: hidden;
+  text-align: justify;
+  box-sizing: border-box;
+  text-align: left;
+  font-weight: 600;
 }
 
 .property-details-text {
@@ -299,6 +312,12 @@
   font-size: 1rem
 }
 
+.lang-en, .table-label, .table-value {
+  font-weight: 600;
+  color: #142651;
+  font-size: 0.9rem
+}
+
 .loan-label {
   font-weight: 500;
   color: #142651;
@@ -332,8 +351,8 @@
 .data-col-1 .data-icon-title-row,
 .data-col-1 .data-value,
 .data-col-1 .data-note {
-  text-align: center;
-  align-self: center;
+  text-align: left;
+  align-self: flex-start;
 }
 
 .data-col-2 {
@@ -379,10 +398,10 @@
   align-self: center;
 }
 
-.data-col .data-value {
+/* .data-col .data-value {
   text-align: center;
   align-self: center;
-}
+} */
 
 .data-icon-title-row {
   display: flex;

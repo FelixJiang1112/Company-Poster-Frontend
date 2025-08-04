@@ -25,14 +25,6 @@ const HomePageA4 = () => {
     setLanguage(prev => prev === 'zh' ? 'en' : 'zh');
   };
 
-  const goToNext = () => {
-    setCurrentIndex(prev => prev < dataList.length - 1 ? prev + 1 : 0);
-  };
-
-  const goToPrevious = () => {
-    setCurrentIndex(prev => prev > 0 ? prev - 1 : dataList.length - 1);
-  };
-
   if (loading) {
     return <div>{language === 'zh' ? '加载中...' : 'Loading...'}</div>;
   }
@@ -43,8 +35,6 @@ const HomePageA4 = () => {
         dataList={dataList} 
         currentIndex={currentIndex} 
         onLanguageToggle={toggleLanguage}
-        onNext={goToNext}
-        onPrevious={goToPrevious}
       />
     );
   } else {
@@ -53,8 +43,6 @@ const HomePageA4 = () => {
         dataList={dataList} 
         currentIndex={currentIndex} 
         onLanguageToggle={toggleLanguage}
-        onNext={goToNext}
-        onPrevious={goToPrevious}
       />
     );
   }
