@@ -27,15 +27,6 @@ CORS(app)
 
 print(os.getenv('DB_NAME'))
 
-db = pymysql.connect(
-    host=os.getenv('DB_HOST'),
-    port=int(os.getenv('DB_PORT')),
-    user=os.getenv('DB_USER'),
-    password=os.getenv('DB_PASSWORD'),
-    database=os.getenv('DB_NAME'),
-    charset=os.getenv('DB_CHARSET')
-)
-
 @app.route('/api/data')
 def get_data():
     try:
@@ -47,7 +38,7 @@ def get_data():
             database=os.getenv('DB_NAME'),
             charset=os.getenv('DB_CHARSET')
         )
-        cursor = db.cursor()
+        cursor = conn.cursor()
         cursor.execute("select * from poster limit 20;")
         # row = cursor.fetchone()
         data = cursor.fetchall()
@@ -76,7 +67,7 @@ def get_data():
                 # 'exit_strategy': '转贷至银行或其他金融机构',
                 'loan_start_date': row[8],
                 'loan_repayment_date': row[9],
-                'loan_term': f"{row[10]} 个月",
+                'loan_term': f"{row[10]}",
                 'minimum_investment': row[11],
                 'loan_amount': f'${float(row[12]):,.1f}' if row[12] is not None else None,
                 'security_value': f'${float(row[13]):,.1f}' if row[13] is not None else None,

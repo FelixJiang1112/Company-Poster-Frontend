@@ -156,7 +156,7 @@ const HomePageA4_CN = ({ dataList, currentIndex, onLanguageToggle, onNext, onPre
                 ['退出机制', data.exit_strategy?.cn || data.exit_strategy],
                 ['借款开始时间', data.loan_start_date],
                 ['预计还款时间', data.loan_repayment_date],
-                ['借款周期', data.loan_term],
+                ['借款周期', data.loan_term ? `${data.loan_term} 个月`:''],
               ].map(([label, value], idx) => (
                 <div className="table-row" key={idx}>
                   <div className="table-label">{label}</div>

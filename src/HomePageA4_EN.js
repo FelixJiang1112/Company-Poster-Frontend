@@ -156,7 +156,7 @@ const HomePageA4_EN = ({ dataList, currentIndex, onLanguageToggle, onNext, onPre
                 ['Exit Strategy', data.exit_strategy?.en || data.exit_strategy],
                 ['Loan Start Date', data.loan_start_date],
                 ['Expected Repayment Date', data.loan_repayment_date],
-                ['Loan Term', data.loan_term],
+                ['Loan Term', data.loan_term ? `${data.loan_term} months` : ''],
               ].map(([label, value], idx) => (
                 <div className="table-row" key={idx}>
                   <div className="table-label">{label}</div>
