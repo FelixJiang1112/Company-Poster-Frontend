@@ -351,8 +351,8 @@
 .data-col-1 .data-icon-title-row,
 .data-col-1 .data-value,
 .data-col-1 .data-note {
-  text-align: center;
-  align-self: center;
+  text-align: left;
+  align-self: flex-start;
 }
 
 .data-col-2 {
